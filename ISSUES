@@ -1,0 +1,11 @@
+The executable has the following issues:
+
+1. During compilation, a deprecated message is emitted regarding a variable.
+
+2. During execution, there are multiple "BadMatch" messages with reference to xcb.
+
+3. During execution, a message about a failure to compose table is emitted from xkb.
+
+4. The window size is not what is specified in the code.
+
+These issues seem to have no effect on the working of the program.
