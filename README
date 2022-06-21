@@ -1,4 +1,4 @@
-Trajecstory 0.3
+Trajecstory 0.4
 ---------------
 
 Trajecstory is a program that plots the trajectory of a single electron in
@@ -20,91 +20,46 @@ Changes in version 0.3
 Availability, Compilation and Installation
 ------------------------------------------
 
-Trajecstory is available as source code to compile on your own machine, as well as a
-binary to install and use.
+Trajecstory is available as source code to compile on your own machine, from the
+repository maintained on GitHub.
 
 Compiling the source
 --------------------
 
-In order to compile the source code, you need the Qt Software Development Kit and the
-GNU Scientific Library (GSL) development files. These can be retrieved from the repositories of
-your Linux installation using the standard package manager which has been provided with
-your system.
-
-The development libraries of Qt are also available from www.qt-project.org.
-The GSL is also available from https://www.gnu.org/software/gsl/.
-
-The Mesa (OpenGL alternative) development files are also required, as well as the standard
-C/C++ development tools.
-
-Untar and unzip the downloaded package with the command:
-
-tar -zxvf tr-0.3-dist.tar.gz
-
-This will create a sub-directory called tr-0.3-dist. If you are using QtCreator, which is an
-integrated development environment for Qt, the project file to load into QtCreator will be
-available in this location.
-
-Open QtCreator, and load the project file tr.pro which is available in the source package.
-Select the version you want to build (debug version or release version) and hit Ctrl-B. If
-there are no problems, this should build the binary.
-
-The program has been compiled and tested on version 4.8.7  of Qt, on Ubuntu Linux 17.04.
-Ctrl-r executes the binary. The binary may be kept in directories separate from the source
-subdirectory, depending on how QtCreator is configured. This location will be available within
-QtCreator.
-
-If you are not using QtCreator, then the Qt development libraries and the GNU Scientific Library
-(GSL) should be pre-installed on your system. Also required is the g++ compiler and development
-files, as well as the "make" utility. Inside the subdirectory "tr-dist" is a Makefile, and running
-the "make" command should build the executable.
-
-The location of the locally compiled binary will be available from within QtCreator. From this
-location copy you may like to copy the binary to a place from where everyone working on the
-computer can run it. In a terminal window, first become superuser:
-su
-<type the root password>
-
-Then change to the subdirectory containing the binary and do:
-cp ./tr /usr/local/bin/tr
-
-Copy the help file to the same location:
-cp ./trhelp.pdf /usr/local/bin/trhelp.pdf
-
-That's it.
-
-Installing the binaries under Linux
------------------------------------
-
 All the source files are available on Github under the following link:
 https://github.com/letapk/trajecstory
+The current source tree compiles and runs using Qt version 5.15.3, under Kubuntu 22.04.
 
 The repository is public. Anyone can check out the branch onto her local machine.
 
-In addition, you will need the libraries and developement files from Qt, which are
-available from the depository of your Linux distribution or from www.qt.io.
-The current source tree compiles and runs using Qt version 5.15.3.
+You will need the following:
+Libraries and development files from Qt (www.qt.io).
 
-Also required are the development files and libraries of the GNU Scientific library.
-They can be found from the GNU website, www.gnu.org, as well as the Linux distribution
-depository for your system.
+The development files and libraries of the GNU Scientific library, GSL (www.gnu.org.).
 
-If you are using QtCreator, load the project file tr.pro which is available in the source
-package. Select the version you want to build (debug version or release version) and hit
+The OpenGL libraries and development files.
+
+All these are available from the depository of your Linux distribution, and can be
+installed using the package manager of your system.
+
+Download all the files in the repository in one subdirectory.
+
+If you are using QtCreator, load the project file tr.pro.
+Select the version you want to build (debug version or release version) and hit
 Ctrl-B. If there are no problems, this should build the binary.
-
-The program has been compiled and tested on version 5.15.3 of Qt, under Ubuntu
-22.04.
 
 The binary may be stored locally in a directoriy separate from the source subdirectory,
 depending on how QtCreator is configured. This location will be available within QtCreator.
 
-If you are not using QtCreator, running the comand:
+If you are not using QtCreator, run the comand:
 qmake tr.pro
-should create a Makefile for your system. Then, running:
+This should create a Makefile for your system. Then, running:
 make
 should create a running binary.
 
+There is no particular requirement as regards installation. However, in order to see the
+license and help file from within the program, the files COPYING and trhelp.pdf should be
+in the same location from where the program is run.
 
 License and copying policy
 --------------------------
